@@ -39,7 +39,7 @@ import PhotoSection from './Components/MediaComponents/PhotoSection/PhotoSection
 import VideoSection from './Components/MediaComponents/VideoSection/VideoSection';
 import OurHakim from './Components/AboutComponents/OurHakim';
 import OurMesqci from './Components/AboutComponents/OurMesqci';
-import Ourİdmaci from './Components/AboutComponents/Ourİdmanci';
+import OurIdmanci from './Components/AboutComponents/OurIdmanci';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import AddYaris from './AdminComponents/AddYarisTime';
 import YarisAdmin from './Pages/AdminPages/YarisTime';
@@ -62,7 +62,7 @@ function App() {
               <Route path="/haqqimizda" element={<AboutPage />} />
               <Route path="/icraiyye-comitesi" element={<AboutCommitet />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/idmancilar" element={<Ourİdmaci />} />
+              <Route path="/idmancilar" element={<OurIdmanci />} />
               <Route path="/hakimler" element={<OurHakim />} />
               <Route path="/mesqciler" element={<OurMesqci />} />
               <Route path="/page/:name" element={<DetailPage />} />
