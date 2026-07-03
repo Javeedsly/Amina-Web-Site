@@ -1,6 +1,7 @@
 import React from 'react'
 import './Partner.scss'
 import { Link } from 'react-router-dom'
+import worldEthnosportLogo from '../../../Image/wordl.jpeg'
 
 function Partner() {
     return (
@@ -45,6 +46,9 @@ function Partner() {
                 </Link>
                 <Link to={"https://www.olympic.az/"} className="partnerBox">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAT6UEzwiUTUL2PQPHt3aZQTjx9JKsOOrfYQ&s" alt="" />
+                </Link>
+                <Link to={"https://worldethnosport.org/"} className="partnerBox">
+                    <img src={worldEthnosportLogo} alt="" />
                 </Link>
                 <Link to={"https://uww.org/"} className="partnerBox">
                     <img src="https://thumbor.prod.vidiocdn.com/530UT_6ZOLanNLcFYT8NzGgA400=/filters:strip_icc():quality(70)/vidio-web-prod-user/uploads/user/avatar/142086897/logouww-647935b0699bcd20.jpeg" alt="" />
