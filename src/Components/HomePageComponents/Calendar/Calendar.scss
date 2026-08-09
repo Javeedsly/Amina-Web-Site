@@ -12,6 +12,54 @@
     background: #CCB892;
     padding: 50px 10px;
 
+    .calendarHead {
+        text-align: center;
+        margin-bottom: 25px;
+        font-family: "Quicksand", sans-serif;
+
+        h2 {
+            color: #18407C;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+
+        p {
+            color: #18407C;
+            opacity: 0.8;
+            margin: 0;
+        }
+    }
+
+    .datePills {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 35px;
+
+        .datePill {
+            border: 2px solid #18407C;
+            background: transparent;
+            color: #18407C;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: "Quicksand", sans-serif;
+
+            &:hover {
+                transform: translateY(-3px);
+            }
+
+            &.active {
+                background: #18407C;
+                color: #CCB892;
+            }
+        }
+    }
+
     .swiper-slide {
         @include MyFlex();
         gap: 20px;
@@ -47,24 +95,67 @@
             .textBox {
                 border-radius: 20px;
                 background: #18407C;
-                height: 30vh;
-                padding: 20px;
+                min-height: 30vh;
+                padding: 25px 20px;
                 font-family: "Quicksand", sans-serif;
-
-                .countdown {
-                    font-size: 20px;
-                    color: #CCB892;
-                }
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
 
                 p {
                     color: #CCB892;
                     font-weight: 600;
+                    margin: 0;
                 }
 
                 span {
                     color: white;
                     font-size: 20px;
+                    font-weight: 700;
                     width: 90%;
+                }
+
+                small {
+                    color: #d9d0bd;
+                    font-size: 13px;
+                    opacity: 0.85;
+                }
+
+                .countdown {
+                    margin-top: 16px;
+                    display: flex;
+                    gap: 10px;
+
+                    &.started {
+                        display: block;
+                        color: #CCB892;
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+
+                    .countUnit {
+                        background: rgba(204, 184, 146, 0.15);
+                        border: 1px solid rgba(204, 184, 146, 0.4);
+                        border-radius: 10px;
+                        padding: 8px 10px;
+                        text-align: center;
+                        min-width: 55px;
+
+                        strong {
+                            display: block;
+                            color: #CCB892;
+                            font-size: 22px;
+                            line-height: 1;
+                        }
+
+                        span {
+                            display: block;
+                            color: #CCB892;
+                            font-size: 11px;
+                            font-weight: 500;
+                            width: auto;
+                        }
+                    }
                 }
             }
         }
@@ -101,11 +192,20 @@
                 margin-top: -100px;
 
                 .textBox {
-                    height: 30vh;
+                    min-height: 30vh;
 
+                    .countdown .countUnit {
+                        min-width: 45px;
+                        padding: 6px 8px;
+                    }
                 }
             }
         }
 
+    }
+
+    .datePills .datePill {
+        font-size: 13px;
+        padding: 6px 12px;
     }
 }

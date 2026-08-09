@@ -10,8 +10,137 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+@keyframes kenburns {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    100% {
+        transform: scale(1.15) translate(-1%, -1%);
+    }
+}
+
+@keyframes heroTextIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 header {
     font-family: "Montserrat", sans-serif;
+
+    .heroBanner {
+        width: 100%;
+        position: relative;
+
+        .heroSwiper {
+            width: 100%;
+            height: 85vh;
+        }
+
+        .heroSlide {
+            position: relative;
+            width: 100%;
+            height: 85vh;
+            overflow: hidden;
+            background: #0b1f3a;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top center;
+                transform: scale(1);
+                transition: transform 0.6s ease;
+
+                &.kenburns {
+                    animation: kenburns 6s ease-out forwards;
+                }
+            }
+
+            .heroOverlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, rgba(11, 31, 58, 0.15) 0%, rgba(11, 31, 58, 0.55) 65%, rgba(11, 31, 58, 0.9) 100%);
+            }
+
+            .heroText {
+                position: absolute;
+                left: 50px;
+                bottom: 70px;
+                right: 50px;
+                max-width: 720px;
+                color: white;
+                opacity: 0;
+                font-family: "Quicksand", sans-serif;
+
+                &.reveal {
+                    animation: heroTextIn 0.9s ease forwards 0.3s;
+                }
+
+                .heroTag {
+                    display: inline-block;
+                    background: #CCB892;
+                    color: #18407C;
+                    font-weight: 700;
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    padding: 6px 14px;
+                    border-radius: 30px;
+                    margin-bottom: 16px;
+                }
+
+                h2 {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    margin: 0 0 10px 0;
+                    line-height: 1.15;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    color: #e6e6e6;
+                    margin: 0 0 22px 0;
+                }
+
+                .heroBtn {
+                    display: inline-block;
+                    padding: 12px 28px;
+                    border-radius: 30px;
+                    background: #CCB892;
+                    color: #18407C;
+                    font-weight: 700;
+                    text-decoration: none;
+                    transition: all 0.35s ease;
+                    border: 1px solid #CCB892;
+
+                    &:hover {
+                        transform: translateY(-4px);
+                        background: transparent;
+                        color: #CCB892;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: 12px !important;
+            height: 12px !important;
+            background-color: rgba(255, 255, 255, 0.5) !important;
+            opacity: 1 !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #CCB892 !important;
+        }
+    }
 
     .swiper {
         width: 100%;
@@ -144,6 +273,35 @@ header {
             content: 'prev';
             color: white;
 
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+
+        .heroBanner {
+
+            .heroSwiper,
+            .heroSlide {
+                height: 60vh;
+            }
+
+            .heroSlide {
+                .heroText {
+                    left: 20px;
+                    right: 20px;
+                    bottom: 40px;
+
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
         }
     }
 }
