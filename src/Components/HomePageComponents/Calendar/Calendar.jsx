@@ -14,7 +14,7 @@ import eventImg4 from '../../../Image/WhatsApp Image 2026-08-09 at 14.07.49 (3).
 const events = [
     {
         id: 1,
-        image: eventImg3,
+        image: eventImg2,
         title: 'Ənənəvi Yayladağı Türkiyə Çempionatı',
         location: 'Devrent Sosyal Tesisleri, Yayladağı / Hatay',
         start: '2026-08-09T10:00:00',
@@ -30,11 +30,11 @@ const events = [
     },
     {
         id: 3,
-        image: eventImg2,
+        image: eventImg3,
         title: 'Karakucak Güreşi Dünya Şampionatı',
         location: 'Bağlum Şəhit Hüseyin Demirtaş Stadionu, Keçiören / Ankara',
-        start: '2026-08-16T10:30:00',
-        dateLabel: '16 Avqust 2026',
+        start: '2026-08-15T10:30:00',
+        dateLabel: '15–16 Avqust 2026',
     },
     {
         id: 4,

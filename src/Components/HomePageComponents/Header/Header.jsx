@@ -28,7 +28,7 @@ const heroSlides = [
     {
         image: heroImg2,
         title: 'Karakucak Güreşi Dünya Şampionatı',
-        subtitle: 'Keçiören, Ankara · 16 Avqust',
+        subtitle: 'Keçiören, Ankara · 15–16 Avqust',
     },
     {
         image: heroImg3,
